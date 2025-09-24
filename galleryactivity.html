@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery_Act</title>
+
+    <style>
+        #urvid{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        content{
+            position: fixed;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px
+        }
+
+        #pause_button{
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        #myBtn:hover{
+            background: #ddd;
+            color: black;
+        }
+        div.slideshow-container {
+            background-color: darksalmon;
+            overflow: auto;
+            white-space: nowrap;
+            padding: 10px;
+        }
+
+        .scroll-container{
+            display: inline-block;
+            margin-right: 10px;
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+<body>
+    <video autoplay muted loop id="urvid">
+        <source src="vid.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
+        <p> Gallery </p>
+        <button id="pause_button" onclick="myFunction()">Pause</button>
+
+    <div class="slideshow-container">
+        <marquee>
+        <img src="ACT_12_FAVORITO/pic1.jpg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic2.jpeg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic3.jpeg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic4.jpeg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic5.jpeg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic6.jpeg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic7.jpeg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic8.jpg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic9.jpg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic10.jpg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic11.jpg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic12.jpg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic13.jpg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic14.jpeg" width="180" height="200">
+        <img src="ACT_12_FAVORITO/pic15.jpeg" width="180" height="200">
+        </marquee>
+    </div>
+
+</body>
+</html>
+
+<script>
+// Video play/pause
+var video = document.getElementById("urvid");
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    document.getElementById("pause_button").innerText = "Pause";
+  } else {
+    video.pause();
+    document.getElementById("pause_button").innerText = "Play";
+  }
+}
+
+// Slideshow
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("mySlides");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 1000); // Change every 2 seconds
+}
+</script>
+
+
