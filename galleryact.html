@@ -12,6 +12,7 @@
             bottom: 0;
             min-width: 100%;
             min-height: 100%;
+            z-index: -1;
         }
 
         content{
@@ -37,7 +38,7 @@
             background: #ddd;
             color: black;
         }
-        div.scroll-container {
+        div.slideshow-container {
             background-color: darksalmon;
             overflow: auto;
             white-space: nowrap;
@@ -85,16 +86,32 @@
 </html>
 
 <script>
-    var video = document.getElementByld("urvid");
-    var btn = document.getElementByld("pause_button");
+// Video play/pause
+var video = document.getElementById("urvid");
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    document.getElementById("pause_button").innerText = "Pause";
+  } else {
+    video.pause();
+    document.getElementById("pause_button").innerText = "Play";
+  }
+}
 
-    function myFunction() {
-        if (video.paused){
-            video.play();
-            btn.innerHTML = "Pause";
-        } else{
-            video.paused();
-            btn.innerHTML = "Play";
-        } 
-    }
+// Slideshow
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("mySlides");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 1000); // Change every 2 seconds
+}
 </script>
+
+
