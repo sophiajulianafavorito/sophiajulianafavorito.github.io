@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Poppins", "Times New Roman", serif;
+            background: linear-gradient(to bottom right, #c59ff2, #eec6f4);
+            color: #222;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: pink;
+            padding: 15px 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #000000;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links li a {
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #6a0dad;
+            border-bottom: 2px solid #6a0dad;
+            padding-bottom: 4px;
+        }
+            .phone-call{
+                font-size: 22px;
+                color: black;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .container{
+                width: 50%;
+                margin: 40px auto;
+                padding: 20px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+            }
+            label{
+                display: block;
+                margin-bottom: 10px;
+            }
+            input, textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+            }
+            button[type="submit"]{
+                background-color: #dc8ed3;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            button[type="submit"]:hover{
+                background-color: #3e8e41;
+            }
+            .content {
+                padding: 40px;
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .circle-image{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                object-position: cover;
+                border: 3px solid black;
+            }
+            .nav-left{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .phone-call{
+                font-size: 15px;
+                color: black;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .email{
+                font-size: 15px;
+                color: black;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .facebook{
+                font-size: 15px;
+                color: black;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .circle-images{
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                object-position: cover;
+                border: 3px solid black;
+            }
+            .footer {
+            background: #8858aa;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-section {
+            margin: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .footer img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        .footer-bottom p {
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+        }
+            
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+    <img src="ACT_12_FAVORITO/pic1.jpg" alt="Profile" class="circle-images" > 
+    <div class="logo">Sophia Juliana</div>
+        </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="galleryactivity.html">Gallery</a></li>   
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+    <div class="container">
+        <h2> Contact Us </h2>
+        <form action="">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        
+        <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="icon/email.png" alt="Email Icon">
+                <span>sophiajulianafavorito30@gmail.com</span>
+            </div>
+            <div class="footer-section">
+                <img src="icon/phone-call.png" alt="Phone Icon">
+                <span>0928-618-9931</span>
+            </div>
+            <div class="footer-section">
+                <img src="icon/facebook.png" alt="Facebook Icon">
+                <span>Sophia Juliana Tesoro Favorito</span>
+            </div>
+            <div class="footer-section">
+                <img src="icon/instagram.png" alt="Instagram Icon">
+                <span>@sophieeeefav</span>
+      </div>
+        </div>
+        <div class="footer-bottom">
+            <b><p>&copy; 2025 Sophia Juliana T. Favorito — All Rights Reserved</p></b>
+        </div>
+         <div class="footer-section">
+                <img src="icon/location.png" alt="Instagram Icon">
+                <span>Pias Sur, Tayum, Abra 2803</span>
+            </div>
+    </footer>
+    
+</body>
+</html>
